@@ -1,0 +1,72 @@
+#branding img.header-image{
+	max-height:120px;
+}
+.widget-title.menu-title{
+	display:none;
+}
+#colophon{
+	background:rgba(0,0,0,0);
+}
+#colophon .widget-container{
+	padding-left:0;
+	font-size:14px;
+	color:#666;
+}
+#colophon .widget-container a{
+	color:#999;
+}
+article.hentry{
+	background:rgba(0,0,0,0);
+	margin-bottom:-0.5em! important;
+}
+.entry-header{
+	margin:10px auto;
+}
+.entry-meta{
+	display:none;
+}
+.entry-title{
+	margin-top:0;
+	margin-bottom:0;
+	font-size:16px;
+	opacity:0.5;
+}
+.main{
+	margin-left:20px;
+}
+a.continue-reading-link{
+	display:none;
+}
+.entry-summary{
+	padding-top:0! important;
+	text-align:center;
+	display:none;
+}
+#site-title a{
+	border:none;
+	font-weight:bold;
+}
+#poweredby{
+	display:none;
+}
+#content-masonry article.hentry{
+	padding:0;
+}
+.main img.post-featured-image{
+	opacity:0.3;
+	    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+	  transition: all 0.5s;
+}
+.main img.post-featured-image:hover{
+	opacity:1;
+	filter: none;
+	  transition: all 0.5s;
+}
+#footer{
+	border:none;
+}

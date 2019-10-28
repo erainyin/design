@@ -1,0 +1,1061 @@
+@charset "UTF-8";
+
+/* 初始化 */
+@import url("normalize.css");
+@import url("webfont.css");
+@import url('https://fonts.font.im/css?family=Montserrat:300,400,500,600');
+
+
+/************************/
+/********* 全局 *********/
+/************************
+统一的样式
+背景色 #3A3A3A
+默认文字颜色 - #EBEBEB
+链接-默认颜色 - #ADADAD
+链接-悬停颜色 - #35c1a1
+************************/
+
+body {
+  background: #262626;
+  color: #EBEBEB;
+  font-family: "Montserrat", "PingFang SC", sans-serif;
+  font-size: 13px;
+  /* letter-spacing: 1px; */
+}
+
+a,
+a:visited {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+a:hover {
+  color: #35c1a1;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+/* 按钮 */
+
+.btn {
+  /* btn frame */
+  color: #ADADAD;
+  border: 1px solid #ADADAD;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+
+.btn_s {
+  /* small button */
+  font-size: 12px;
+  line-height: 14px;
+  padding: 2px 10px 4px;
+  border-radius: 20px;
+}
+
+.btn_m {
+  /* middle button */
+  font-size: 12px;
+  line-height: 16px;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.btn_l {
+  /* large button */
+  font-size: 14px;
+  line-height: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.btnc {
+  /* circle shaped button */
+  display: inline-block;
+  border-radius: 100%;
+  border-color: transparent;
+}
+
+.btnc_l {
+  /* large circle button */
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 9px;
+}
+
+.btn:hover,
+.btn.hover,
+.btnc:hover,
+.btnc.hover {
+  background: #35c1a1;
+  color: #fff;
+  border-color: #35c1a1;
+  transition: all 0.5s;
+  opacity: 1;
+  box-shadow: 0 3px 15px rgba(21, 194, 155, .51);
+}
+
+
+
+
+
+/* 标题 */
+.title_xxxl {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  /* font-size: 80px;
+  line-height: 76px; */
+}
+
+.h1 {
+  font-size: 64px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.h2 {
+  font-size: 40px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.h3 {
+  font-size: 32px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.h4 {
+  font-size: 24px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.h5 {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+.h6 {
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 300;
+}
+
+/* 文本对齐 */
+.align_r {
+  text-align: right;
+}
+
+.align_l {
+  text-align: left;
+}
+
+.align_c {
+  text-align: center;
+}
+
+/* 导航 */
+
+.navbar {
+  position: fixed;
+  padding: 0;
+  background: -webkit-linear-gradient(rgba(36, 36, 36, 1), rgba(36, 36, 36, 0));
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(rgba(36, 36, 36, 1), rgba(36, 36, 36, 0));
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(rgba(36, 36, 36, 1), rgba(36, 36, 36, 0));
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(rgba(36, 36, 36, 1), rgba(36, 36, 36, 0));
+  /* 标准的语法 */
+  /* border-bottom: 1px solid rgba(255,255,255,.05); */
+  z-index: 10001;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.navbar .brand {
+  margin: 24px auto;
+}
+
+.navbar .brand a {
+  display: block;
+  position: relative;
+  height: 32px;
+  color: #fff;
+}
+
+.navbar .brand .icyy-logo {
+  display: inline-block;
+  font-size: 32px;
+  /* margin-right: 10px; */
+  /* transition: all 0.3s; */
+
+}
+
+.navbar .brand .sitename {
+  text-transform: uppercase;
+  line-height: 32px;
+  float: right;
+  display: none;
+  /* transition: all 0.3s; */
+
+}
+.navbar .brand .sitename .alert{
+  display: none;
+}
+.navbar .menu {
+  margin: 20px 30px;
+  height: 40px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.navbar .menu li {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-left: 10px;
+  line-height: 40px;
+  position: relative;
+}
+
+.navbar .nav_current {
+  color: #fff;
+}
+
+.navbar .nav_current:hover {
+  color: #35c1a1;
+}
+
+/* 版权信息 */
+
+.copyright {
+  /* 位于左下角固定位置 */
+  writing-mode: vertical-lr;
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  color: rgba(255, 255, 255, .2);
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0;
+
+}
+
+.copyright span {
+  line-height: 20px;
+}
+
+.totop {
+  /* 返回顶部按钮，位于右下角，固定尺寸，固定位置 */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 10000;
+  width: 30px;
+  overflow: hidden;
+}
+.totop a {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  margin-top:10px;
+}
+.totop #share{
+  opacity: 0;
+}
+.totop #qrcode{
+  opacity: 0;
+  line-height: 28px;
+
+}
+.totop #moveto1scr {
+  transform: rotateZ(180deg);
+}
+.totop:hover #share,.totop:hover #qrcode{
+  opacity: 1;
+}
+.totop #moveto1scr span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  /* border: 1px solid white; */
+  background: #35c1a1;
+  margin-left: 9px;
+  margin-top: 4px;
+  border-radius: 100%;
+  opacity: 0;
+
+}
+.totop #moveto1scr:hover span {
+  border: 1px solid white;
+}
+.totop #moveto1scr.back {
+  transform: none;
+  transition: all 0.5s;
+
+}
+
+.totop #moveto1scr.back span {
+  opacity: 1;
+
+}
+
+.totop #moveto1scr:hover {
+  opacity: 1;
+}
+
+/*
+
+   Styles for animated modal
+   =========================
+
+*/
+
+/* Start state */
+.animated-modal {
+  max-width: 550px;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  transform: translateY(-50px);
+  transition: all .7s;
+  padding:20px;
+}
+
+.animated-modal h2,
+.animated-modal p {
+  transform: translateY(-50px);
+  opacity: 0;
+  
+  transition-property: transform, opacity;
+  transition-duration: .4s;
+  color: #3a3a3a;
+  font-weight: 600;
+  margin-bottom:0; 
+}
+
+/* Final state */
+.fancybox-slide--current .animated-modal,
+.fancybox-slide--current .animated-modal h2,
+.fancybox-slide--current .animated-modal p {
+  transform: translateY(0);
+  opacity: 1;
+  
+}
+
+/* Reveal content with different delays */
+.fancybox-slide--current .animated-modal h2 {
+  transition-delay: .1s;
+}
+
+.fancybox-slide--current .animated-modal p {
+  transition-delay: .3s;
+}
+
+
+
+
+.fancybox-slide{
+  padding:20px! important;
+}
+/************************/
+/******* SCREEN 1 *******/
+/************************/
+
+.screen1 .maintext {
+  /* 主题文字 */
+  /* top: 300px; */
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 9998;
+  position: relative;
+}
+.screen1 .part2, .screen1 .h6 a.showless{
+  display: none;
+}
+.screen1 .maintext .marker {
+  /* background: #f00; */
+  top: 80%;
+  position: absolute;
+}
+
+.screen1 .maintext .subtitle {
+  /* 主题文字下方的小标题 */
+  font-size: 14px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.4);
+  /* font-weight: 100; */
+}
+
+.screen1 .maintext a {
+  /* 主题文字中高亮的内容 */
+  font-style: normal;
+  /* border-bottom: 2px dotted rgba(255,255,255,0.8); */
+  transition: all 0.5s;
+  position: relative;
+  color: rgba(53, 193, 161, 0.75);
+}
+
+.screen1 .maintext .h6 {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.screen1:hover .maintext a {
+  /* 主题文字内的链接 */
+  color: rgba(53, 193, 161, 0.75);
+
+}
+
+.screen1 .maintext a:hover {
+  /* 主题文字内的链接 */
+  border-color: #35c1a1;
+  color: rgba(53, 193, 161, 1);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.screen1 .slide {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background: url('../image/mainImage@2x.jpg') no-repeat;
+  background-size: cover;
+  /* opacity: 0.15; */
+  overflow: hidden;
+  /* box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3); */
+  transition: all 0.5s;
+
+}
+
+
+/************************/
+/******* SCREEN 2 *******/
+/************************/
+
+.screen2{
+  padding-left:30px;
+  padding-right:30px;
+}
+.screen2 .worktype {
+  text-align: right;
+  margin-bottom: 90px;
+  margin-top: -10px;
+}
+
+.screen2 .h4 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+
+.screen2 .h4 em {
+  display: inline-block;
+  font-style: normal;
+  position: relative;
+  font-weight:600;
+}
+
+.screen2 .h4 em span {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #35c1a1;
+  bottom: 0px;
+}
+
+.screen2 .worktype li {
+  margin-left: 20px;
+}
+
+.screen2 .worklist .workitem {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.screen2 .worklist .workitem a {
+  color: #fff;
+}
+
+.screen2 .worklist .workitem .workinfo {
+  min-height: 120px;
+  position: relative;
+  color: rgba(255, 255, 255, .2);
+  background: #2b2b2b;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.screen2 .worklist .workitem .workinfo .name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgba(255, 255, 255, .6);
+  transition: all 0.5s;
+  height: 44px;
+  overflow: hidden;
+}
+
+.screen2 .worklist .workitem .workinfo .topLeft {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+}
+
+.screen2 .worklist .workitem .workinfo .bottomLeft {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.screen2 .worklist .workitem .workinfo .bottomRight {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+}
+
+.screen2 .worklist .workitem:hover .workinfo {
+  color: #fff;
+  background: #35c1a1;
+  transition: all 0.5s;
+}
+
+.screen2 .worklist .workitem:hover .workinfo .name {
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.screen2 .worklist .workitem:hover .workinfo .bottomRight {
+  bottom: 20px;
+  transition: bottom 0.3s;
+}
+
+.screen2 .worklist .workitem:hover .workinfo .bottomLeft {
+  bottom: 20px;
+  transition: bottom 0.3s;
+}
+
+.screen2 .worklist .workitem .thumbImg {
+  position: relative;
+  overflow: hidden;
+}
+
+.screen2 .worklist .workitem .thumbImg img {
+  transition-duration: 0.3s;
+  /*过度的时间为0，5秒*/
+
+}
+
+.screen2 .worklist .workitem .thumbImg .thumbOnHover {
+  position: absolute;
+  background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.screen2 .worklist .workitem a .thumbImg .thumbOnHover p {
+  line-height: 0.75;
+}
+
+.screen2 .worklist .workitem a .thumbImg .thumbOnHover p .line {
+  display: inline-block;
+  width: 1%;
+  height: 2px;
+  background: #35c1a1;
+}
+
+.screen2 .worklist .workitem a .thumbImg .thumbOnHover p img {
+  width: 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+.screen2 .worklist .workitem:hover a .thumbImg .thumbOnHover {
+  opacity: 1;
+  transition: all 0.3s;
+  z-index: 9998;
+}
+
+.screen2 .worklist .workitem:hover a .thumbImg .thumbOnHover p .line {
+  width: 50%;
+  transition: all 0.5s;
+}
+
+.screen2 .worklist .workitem:hover a .thumbImg img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  /*Safari 和 Chrome*/
+  -moz-transform: scale(1.1);
+  /*Firefox*/
+  -ms-transform: scale(1.1);
+  /*IE9*/
+  -o-transform: scale(1.1);
+  /*Opera*/
+  transition-duration: 0.5s;
+  /*过度的时间为0，5秒*/
+}
+
+.screen2 .practice {
+  display: none;
+}
+
+.screen2 .viewall {
+  margin: 30px 0;
+}
+
+/************************/
+/******* SCREEN 3 *******/
+/************************/
+.screen3{
+  padding-left:30px;
+  padding-right:30px;
+}
+.screen3 .block {
+  margin-bottom: 60px;
+  padding-left: 15px;
+}
+
+.screen3 .block .btn {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.screen3 .h4 {
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.screen3 .h4 em {
+  display: inline-block;
+  font-style: normal;
+  position: relative;
+  font-weight: 600;
+}
+
+.screen3 .h4 em span {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #35c1a1;
+  bottom: 0px;
+}
+
+/************************/
+/******* SCREEN 4 *******/
+/************************/
+
+.screen4 {
+  margin-bottom: 200px;
+  padding-top: 100px;
+}
+
+.screen4 .block {
+  position: relative;
+  /* border: 1px solid #444; */
+  background: #2b2b2b;
+  margin-bottom: 60px;
+  min-height: 500px;
+  /* opacity:0; */
+}
+
+.screen4 .block .texts {
+  padding: 60px 30px;
+  position: relative;
+  z-index: 1;
+
+}
+
+.screen4 .block .texts .h6 {
+  color: #666;
+  line-height: 1.4;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.screen4 .block .texts .h2 {
+  line-height: 1;
+  margin-bottom:20px;
+
+}
+.screen4 .block .texts .list .h4 {
+  line-height: 1.2;
+}
+
+.screen4 .block .block_bg {
+  position: absolute;
+  height: 100%;
+  opacity: 0.3;
+  /* top:-20px; */
+}
+
+.screen4 .block .block_bg img {
+  height: 100%;
+}
+.screen4 .block_ui{
+  position: relative;
+}
+.screen4 .block_ui .block_bg {
+  right: 0px;
+  background: url('../image/myexp@2x.png') no-repeat;
+  background-size: cover;
+}
+.screen4 .block_branding .block_bg {
+  background: url('../image/myserv@2x.png') center right no-repeat;
+  background-size: cover;
+}
+.screen4 .block_ui,
+.screen4 .block_branding {
+  opacity: 0;
+}
+.screen4 .block_ui .details{
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  background: #3a3a3a;
+  color:#ADADAD;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+.screen4 .block_ui .details .block{
+  display: none;
+  padding:30px;
+  color:#666;
+}
+.screen4 .block_ui .details .block p{
+  font-size: 16px;
+  color:#fff;
+}
+
+.screen4 .block_ui .details .block .back{
+  position: absolute;
+  bottom:30px;
+  right:30px;
+}
+
+.screen4 .block_ui .list .h4:hover, .screen4 .block_branding .list .h4:hover{
+  color: #35c1a1;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+/************************/
+/******** FOOTER ********/
+/************************/
+
+.footer {
+  padding-top: 200px;
+  min-height: 600px;
+  background: #2b2b2b;
+}
+
+.footer .title_xxxl {
+  margin-bottom: 40px;
+}
+
+.footer .title_xxxl span {
+  color: inherit;
+  transition: all 0.5s;
+
+}
+
+.footer .wayofcontact a {
+  margin: 0 5px 10px 0;
+}
+
+.nav_footer {
+  color: #666;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.footer:hover .title_xxxl span {
+  color: #35c1a1;
+  transition: all 0.5s;
+
+}
+
+
+/************************/
+/******** workcontent ********/
+/************************/
+
+.workcontent {
+  background: #242424;
+}
+
+.workcontent h2,
+.workcontent h4 {
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.workcontent h6 {
+  line-height: 1.5;
+
+}
+
+.workcontent .col-lg-8,
+.workcontent .col-lg-4,
+.workcontent .col-lg-12,
+.workcontent .col-12 {
+  padding: 0;
+}
+
+.workcontent .col-lg-4 {
+  padding-right: 30px;
+}
+
+
+/* #mouseP{
+  position:absolute;
+  display: block;
+  width: 10px;
+  height:10px;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: #35c1a1;
+} */
+
+
+.fancybox-stage {
+  background: #242424;
+}
+
+/************************/
+/******** Media Query ********/
+/************************/
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width:575.99px) {
+  .totop #qrcode, .totop #moveto1scr{
+    opacity: 1;
+  
+  }
+  .maintext {
+    font-size: 36px;
+    /* line-height: 60px; */
+    transition: all 0.3s;
+    line-height: 1;
+  }
+
+  .maintext .h6 {
+    margin-top: 10px !important;
+  }
+
+  .screen1 .slide {
+    width: 100%;
+  }
+
+  .screen2 .h4 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .screen2 .worktype li {
+    margin-left: 10px;
+  }
+  .screen2 .worklist .workitem {
+    padding:0;
+  }
+  .screen4 {
+    margin-bottom: 100px;
+  }
+  .screen4 .block .texts .h2 {
+    font-size:36px;
+    margin-bottom:15px;
+  }
+  .screen4 .block .texts .h6 {
+    color: #ADADAD;
+  }
+
+}
+
+@media (min-width: 576px) {
+
+  .title_xxxl {
+    font-size: 48px;
+    /* line-height: 60px; */
+    transition: all 0.3s;
+    line-height: 0.95;
+  }
+
+  .screen1 .maintext a span {
+    font-size: 12px;
+  }
+
+  .screen1 .maintext a:hover span {
+    top: 13px;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .screen4 .block .texts {
+    padding: 60px 45px;
+  }
+  
+
+  .screen2 .h4 {
+    font-size: 18px;
+  }
+
+}
+@media (max-width: 767.99px) {
+  .screen4 .block .texts{
+   padding-bottom:0; 
+  }
+  .screen4 .block .block_bg{
+    position: relative;
+    height:350px;
+    background-size: 80%;
+    margin-bottom:30px;
+  }
+  .screen4 .block_ui .block_bg{
+    background-position: top right;
+  }
+  .screen4 .block_branding .block_bg{
+    background-position: top left;
+  }
+
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .copyright {
+    opacity: 1;
+  }
+
+  .title_xxxl {
+    font-size: 60px;
+    /* line-height: 68px; */
+    transition: all 0.3s;
+  }
+
+  .navbar .brand {
+    margin: 24px 30px;
+  }
+
+  .navbar .brand .icyy-logo {
+    margin-right: 10px;
+    /* transition: all 0.3s; */
+  }
+
+  .navbar .brand .sitename {
+    display: block;
+    text-transform: uppercase;
+    line-height: 32px;
+    float: right;
+  }
+
+  .navbar .menu {
+    display: block;
+  }
+  .screen1 .slide {
+    width: 70%;
+  }
+  .screen1 .maintext a {
+    color: #fff;
+  }
+
+  .screen1 .maintext a:hover span {
+    top: 16px;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .screen1 .maintext a span {
+    font-size: 14px;
+  }
+
+  .screen1 .maintext a:hover span {
+    top: 10px;
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .screen2 .h4 {
+    font-size: 20px;
+  }
+
+  .screen2 .worklist .workitem .workinfo .bottomLeft {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+  }
+
+  .screen2 .worklist .workitem .workinfo .bottomRight {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+  }
+  .fancybox-slide{
+    padding:44px! important;
+  }
+  /* .screen4 .block{
+    background: none;
+  } */
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  .title_xxxl {
+    font-size: 72px;
+    /* line-height: 76px; */
+    transition: all 0.3s;
+  }
+  .navbar .brand .sitename .alert{
+    color:#35c1a1;
+    padding:0;
+    display: inline-block;
+  }
+  .screen1 .slide {
+    width: 60%;
+  }
+
+  .screen2 .h4 {
+    font-size: 24px;
+  }
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5){
+  .title_xxxl {
+    font-weight: 600;
+  }
+  .h2 {
+    font-weight: 600;
+  }
+  .h5 {
+    font-weight: 400;
+  }
+  .h6 {
+    font-weight: 400;
+  }
+  .screen2 .worklist .workitem .workinfo .name {
+    font-weight: 500;
+  }
+      
+}

@@ -1,0 +1,59 @@
+  /* 字体图标加载 */
+
+  @font-face {
+    font-family: 'yinyudb';
+    src:  url('../webfonts/yinyudb.eot?wvt0pm');
+    src:  url('../webfonts/yinyudb.eot?wvt0pm#iefix') format('embedded-opentype'),
+      url('../webfonts/yinyudb.ttf?wvt0pm') format('truetype'),
+      url('../webfonts/yinyudb.woff?wvt0pm') format('woff'),
+      url('../webfonts/yinyudb.svg?wvt0pm#yinyudb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icyy-"], [class*=" icyy-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'yinyudb' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icyy-logo:before {
+    content: "\e908";
+  }
+  .icyy-ico-left:before {
+    content: "\e907";
+  }
+  .icyy-ico-right:before {
+    content: "\e906";
+  }
+  .icyy-times:before {
+    content: "\e905";
+  }
+  .icyy-cate-heart:before {
+    content: "\e909";
+  }
+  .icyy-cate-all:before {
+    content: "\e900";
+  }
+  .icyy-cate-logo:before {
+    content: "\e901";
+  }
+  .icyy-cate-mobile:before {
+    content: "\e902";
+  }
+  .icyy-cate-print:before {
+    content: "\e903";
+  }
+  .icyy-cate-web:before {
+    content: "\e904";
+  }
+  
